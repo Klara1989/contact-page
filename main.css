@@ -1,0 +1,279 @@
+/*------------------------------------*\
+  #BASE
+\*------------------------------------*/
+
+* { box-sizing: border-box; }
+
+html { font-size: 14px; }
+
+h2, h6, p { margin: 0; }
+
+h2, h6 { margin-bottom: 1.071rem; }
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body {
+    color: #211138;
+    background-color: #f4f3f5;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2 { font-size: 2.857rem; }
+
+/*------------------------------------*\
+  #LAYOUT
+\*------------------------------------*/
+
+/*------------------------------------*\
+  #LAYOUT-ARRANGEMENT
+\*------------------------------------*/
+
+.layout__item--full-width { width: 100%; }
+
+.layout__item--70-percent { width: 70%; }
+
+.layout__item--50-percent { width: 50%; }
+
+.layout__item--50-percent-w-gutter { width: calc(50% - 1.071rem); }
+
+.layout__item--content-w-sticked--footer { min-height: calc(100vh - 80px); }
+
+.layout__item--centered-horizontally {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.layout__item--floated-left { float: left; }
+
+.layout__item--floated-right { float: right; }
+
+
+/*------------------------------------*\
+  #INTERSPACES
+\*------------------------------------*/
+
+.gutter--horizontal-small { margin-bottom: 2.142rem; }
+
+.gutter--horizontal-big {margin-bottom: 2.857rem; }
+
+
+/*------------------------------------*\
+  #HELPERS
+\*------------------------------------*/
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+
+
+.button {
+    display: inline-block;
+    border: 2px solid;
+    border-radius: 1.786rem;
+    text-align: center;
+}
+
+    .button--secondary-solid {
+        border: 0;
+        color: #6200ea;
+        background-color: #ffffff;
+    }
+
+    .button--secondary-solid:visited { color: #6200ea; }
+
+/*------------------------------------*\
+  #HEADER
+\*------------------------------------*/
+
+.header {
+    height: 80px;
+    background-color: #6200ea;
+}
+
+
+    .logo {
+            float: left;
+            margin: 1.071rem;
+        }
+
+/*------------------------------------*\
+  #NAVIGATION
+\*------------------------------------*/
+
+.navigation { height: 80px; }
+
+
+    .navigation__link-container {
+        float: right;
+        padding-top: 2.321rem;
+    }
+
+    .navigation__link {
+        padding-bottom: 2rem;
+        margin-left: 4.571rem;
+        color: #f4f3f5;
+        vertical-align: middle;
+        border-bottom: 4px solid;
+        border-color: transparent;
+        opacity: 0.65;
+        font-size: .857rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: .171rem;
+    }
+
+    a.navigation__link:first-child { margin-left: 0; }
+
+    .navigation__link:visited { color: #f4f3f5; }
+
+    .navigation__link:hover {
+        border-color: #ffffff;
+        color: #ffffff;
+        opacity: 1;
+    }
+
+
+/*------------------------------------*\
+  #CONTACT-DETAILS
+\*------------------------------------*/
+
+.contact-info {
+    padding: 4.286rem;
+    border-radius: 1.071rem;
+    background-color: #ffffff;
+}
+
+    .contact-info__map {
+        width: 100%;
+        height: 300px;
+        border-radius: 1.071rem;
+    }
+
+    .contact-info__map, .contact-info__address, .contact-info__phone-email {
+        margin-bottom: 2.143rem;
+    }
+
+    .contact-info__social-media { margin-bottom: .357rem; }
+
+        .contact-info__heading, .contact-info__link {
+            color: #6200ea;
+        }
+
+        .contact-info__link {
+            display: block;
+            margin-bottom: .714rem;
+            font-size: .857rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: .171rem;
+        }
+
+        .contact-info__heading {
+            margin-bottom: .714rem;
+            font-size: .857rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: .171rem;
+        }
+
+        .contact-info__social-media-link {
+            display: inline-block;
+            width: 2.857rem;
+            height: 2.857rem;
+            padding: .714rem;
+            border-radius: 50%;
+            margin-right: .714rem;
+            background-color: #6200ea;
+            text-align: center;
+        }
+
+        .contact-info__social-media-icon {
+            color: #ffffff;
+            font-size: 1.4rem;
+        }
+
+
+/*------------------------------------*\
+  #CONTACT-FORM
+\*------------------------------------*/
+
+.contact-form {
+    padding: 4.286rem;
+    border-radius: 1.071rem;
+    background-color: #ffffff;
+}
+
+    .contact-form__header { margin-bottom: 1.429rem; }
+
+        .contact-form__title { margin-bottom: .714rem; }
+
+        .contact-form__cta {
+            font-size: 1.429rem;
+            line-height: 30px;
+        }
+
+    .contact-form__input-field {
+        display:          block;
+        width:            100%;
+        padding:          1.1428rem 0 .9286rem 1.7143rem;
+        border:           0;
+        border-bottom:    3px solid;
+        border-color:     transparent;
+        margin-bottom:    1.071rem;
+        background-color: #f4f3f5;
+        outline:          none;
+    }
+
+    .contact-form__input-field:focus { border-bottom-color: #6200ea; }
+
+    .contact-form__input-field::placeholder {
+        font-weight: bold;
+        opacity: .25;
+    }
+
+.contact-form__input-field--textarea {
+    height: 150px;
+    margin-bottom: 1.4286rem;
+}
+
+.contact-form__submit {
+    width: 100%;
+    padding: 1.28rem 0;
+    margin-bottom: 0;
+    font-size: .857rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .171rem;
+}
+
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+
+.footer {
+    height: 7.1rem;
+    padding: 3.071rem 0 3rem 0;
+    text-align: center;
+    background-color:#211138;
+  }
+  
+    .footer__copyright {
+      text-transform: uppercase;
+      font-size: .857rem;
+      font-weight: bold;
+      letter-spacing: .171rem;
+      color:#b2acba;
+    }
+  
+    .footer__brand-name, .footer__student-name {
+      color: #6200ea;
+    }
